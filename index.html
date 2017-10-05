@@ -1,52 +1,135 @@
-<HTML>
-   <HEAD>
-      <TITLE>
-         Sonect App Distribution
-      </TITLE>
+<html>
+    <head>
+        <title>
+            SONECT - App distribution
+        </title>
 
-      <style>
-img {width: 96px; height: 96px;}
-h1, h5 {color: white;}
-</style>
+        <!-- SONECT font: Raleway -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+              crossorigin="anonymous">
 
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    </head>
 
-   </HEAD>
-   <BODY style="margin:0px; padding:0px;" bgcolor="#000">
-      <center>
-         <H1>iOS PROD 1.3 - https://api.sonect.ch, Stripe Live</H1>
-         <a href="itms-services://?action=download-manifest&url=https://shardul.github.io/sonect_app_distribution/manifest.plist"><IMG SRC="icon.png"></a><BR/><BR/>
-            <BR/>
-           <H1>iOS DEV 1.3 RC 1 - http://207.154.210.145:8080</H1>
-         <a href="itms-services://?action=download-manifest&url=https://shardul.github.io/sonect_app_distribution/manifest2.plist"><IMG SRC="icon.png"></a><BR/><BR/>
-            <BR/>
-            <H1>iOS DEV 1.2.2 RC 1 http://207.154.210.145:8080, Stripe Test</H1>
-         <a href="itms-services://?action=download-manifest&url=https://shardul.github.io/sonect_app_distribution/manifest3.plist"><IMG SRC="icon.png"></a><BR/><BR/>
-            <BR/> 
+    <body style="margin:0px; padding:0px;" bgcolor="#eceeef">
+        <div class="container-fluid">
 
+            <div class="row mb-3">
+                <div class="col">
+                    <img src="assets/img/Sonect_Wordmark_Black_RGB_TRANSP.png" alt="SONECT AG" style="height: 70px; width: auto;"/>
+                </div>
+            </div>
 
+            <!-- IOS-DEV -->
+            <div class="row mb-3">
+                <div class="col-sm-12"><h3 style="border-bottom: 1px solid">IOS - DEV</h3></div>
 
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">1.3 RC-1</h4>
+                            <p class="card-text">
+                            <ul>
+                                <li>server: http://207.154.210.145:8080</li>
+                                <li>stripe: live</li>
+                            </ul>
+                            </p>
+                            <a class="btn btn-primary" href="download-link" href="itms-services://?action=download-manifest&url=https://shardul.github.io/sonect_app_distribution/manifest2.plist">Download</a>
+                        </div>
+                    </div>
+                </div>
 
-         <H1>Android - DEV 1.2.3 http://165.227.134.84 - stripe test</H1>
-         <BR/>
-         <a href="https://github.com/shardul/sonect_app_distribution/releases/download/dev/app-debug.apk"><IMG SRC="icon.png"></a>
-                     <BR/>
-            
-            <H1>Android - 1.3.1 https://api.sonect.ch - stripe live</H1><BR/>
-             <a href="https://github.com/shardul/sonect_app_distribution/releases/download/enpoints/app-release.apk"><IMG SRC="icon.png"></a>
-                     <BR/>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">1.2.2 RC-1</h4>
+                            <p class="card-text">
+                            <ul>
+                                <li>server: http://207.154.210.145:8080</li>
+                                <li>stripe: test</li>
+                            </ul>
+                            </p>
+                            <a class="btn btn-primary" href="download-link" href="itms-services://?action=download-manifest&url=https://shardul.github.io/sonect_app_distribution/manifest3.plist">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-          <H1>Android - 1.3.2 https://api.sonect.ch - stripe live</H1><BR/>
-             <a href="https://github.com/shardul/sonect_app_distribution/releases/download/Production/app-release.apk"><IMG SRC="icon.png"></a>
-                     <BR/>
+            <!-- IOS-PROD -->
+            <div class="row mb-3">
+                <div class="col-sm-12"><h3 style="border-bottom: 1px solid">IOS - PROD</h3></div>
 
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">1.3</h4>
+                            <p class="card-text">
+                            <ul>
+                                <li>server: https://api.sonect.ch</li>
+                                <li>stripe: live</li>
+                            </ul>
+                            </p>
+                            <a class="btn btn-primary" href="download-link" href="itms-services://?action=download-manifest&url=https://shardul.github.io/sonect_app_distribution/manifest.plist">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<!-- -->
+            <!-- ANDROID-DEV -->
+            <div class="row mb-3">
+                <div class="col-sm-12"><h3 style="border-bottom: 1px solid">Android - DEV</h3></div>
 
-                       <!-- <H1>Node status check</H1>
-                     <a href='./node-status/index.html'><IMG SRC="icon.png"></a> -->
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">1.2.3</h4>
+                            <p class="card-text">
+                            <ul>
+                                <li>server: http://165.227.134.84</li>
+                                <li>stripe: test</li>
+                            </ul>
+                            </p>
+                            <a class="btn btn-primary" href="download-link" href="https://github.com/shardul/sonect_app_distribution/releases/download/dev/app-debug.apk">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- ANDROID-PROD -->
+            <div class="row mb-3">
+                <div class="col-sm-12"><h3 style="border-bottom: 1px solid">Android - PROD</h3></div>
 
-                         <!-- <a href="itms-services://?action=download-manifest&url=https://shardul.github.io/sonect_app_distribution/manifest4.plist"><IMG></a><BR/><BR/> -->
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">1.3.2</h4>
+                            <p class="card-text">
+                            <ul>
+                                <li>server: https://api.sonect.ch</li>
+                                <li>stripe: live</li>
+                            </ul>
+                            </p>
+                            <a class="btn btn-primary" href="download-link" href="https://github.com/shardul/sonect_app_distribution/releases/download/Production/app-release.apk">Download</a>
+                        </div>
+                    </div>
+                </div>
 
-      </center>
-   </BODY>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">1.3.1</h4>
+                            <p class="card-text">
+                            <ul>
+                                <li>server: https://api.sonect.ch</li>
+                                <li>stripe: live</li>
+                            </ul>
+                            </p>
+                            <a class="btn btn-primary" href="download-link" href="https://github.com/shardul/sonect_app_distribution/releases/download/enpoints/app-release.apk">Download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

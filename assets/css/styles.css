@@ -1,0 +1,17 @@
+.version {
+    height: 200px;
+    width: 200px;
+}
+
+.download-link {
+    text-decoration: none;
+}
+
+.download-link img {
+    height: auto;
+    width: 50px;
+}
+
+ul {
+    padding-left: 20px !important;
+}
