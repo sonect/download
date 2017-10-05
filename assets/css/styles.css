@@ -8,12 +8,8 @@ body {
 }
 
 .download-link {
+    float: right;
     text-decoration: none;
-}
-
-.download-link img {
-    height: auto;
-    width: 50px;
 }
 
 ul {
