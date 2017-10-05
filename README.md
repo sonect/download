@@ -1,2 +1,1 @@
-# app-dist
-App distribution page
+# sonect_app_distribution
