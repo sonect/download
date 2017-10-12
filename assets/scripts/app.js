@@ -14,8 +14,10 @@ app.controller('appDistController', function($scope, $http, $filter) {
 
       if (link.href.indexOf("itms") != -1) {
         platforms['iOS'] = link;
+        link.classList.add("disabled");
       } else if (link.href.indexOf("apk") != -1) {
         platforms['Android'] = link;
+        link.classList.add("disabled");
       }
 
       releases[title.textContent] = platforms
@@ -43,6 +45,7 @@ app.controller('appDistController', function($scope, $http, $filter) {
               }
 
               if (angular.isDefined(releaseLink)) {
+                releaseLink.classList.remove("disabled");
                 var ul = releaseLink.parentNode.getElementsByTagName('ul')[0];
                 if (angular.isDefined(ul)) {
                   var li = document.createElement("li");
