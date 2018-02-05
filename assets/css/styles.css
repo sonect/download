@@ -1,3 +1,18 @@
+.sonect-grey-bg { background: #668282 !important; }
+.sonect-grey-color { color: #668282 !important; }
+.sonect-beige-bg { background: #e3dfcb !important; }
+.sonect-beige-color { color: #e3dfcb !important; }
+.sonect-blue-bg { background: #5ac4f1 !important; }
+.sonect-blue-color { color: #5ac4f1 !important; }
+.sonect-berry-bg { background: #96006b !important; }
+.sonect-berry-color { color: #96006b !important; }
+.sonect-flamingo-bg { background: #ff0069 !important; }
+.sonect-flamingo-color { color: #ff0069 !important; }
+.sonect-orange-bg { background: #ffa300 !important; }
+.sonect-orange-color { color: #ffa300 !important; }
+.sonect-lime-bg { background: #bfe500 !important; }
+.sonect-lime-color { color: #bfe500 !important; }
+
 body {
     background-color: #eceeef;
     padding: 20px;
