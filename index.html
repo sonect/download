@@ -1,266 +1,296 @@
 <!DOCTYPE html>
 <html ng-app="appDist" ng-controller="appDistController">
-    <head>
-        <title>
-            SONECT - App distribution
-        </title>
+<head>
+    <title>
+        SONECT - App distribution
+    </title>
 
-        <!-- SONECT font: Raleway -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-              crossorigin="anonymous">
+    <!-- SONECT font: Raleway -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+          crossorigin="anonymous">
 
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
-        <script src="assets/scripts/angular-1.4.3.min.js"></script>
-        <script src="assets/scripts/app.js"> </script>
-    </head>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <script src="assets/scripts/angular-1.4.3.min.js"></script>
+    <script src="assets/scripts/app.js"></script>
+</head>
 
-    <body>
-        <div class="container-fluid">
+<body>
+<div class="container-fluid">
 
-            <div class="row mb-3">
-                <div class="col">
-                    <img src="assets/img/Sonect_Wordmark_Black_RGB_TRANSP.png" alt="SONECT AG" style="height: 70px; width: auto;"/>
-                </div>
-            </div>
-
-            <!-- IOS-DEV -->
-            <div class="row mt-3">
-                <div class="col-sm-12"><h3 style="border-bottom: 1px solid">IOS - DEV</h3></div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Development</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: http://207.154.210.145:8080</li>
-                                <li>stripe: test</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/dev.plist">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RBI -->
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">POC - RBI</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: http://138.68.73.155:8080</li>
-                                <li>stripe: test</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/rbi.plist">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">prototype</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: http://207.154.210.145:8080</li>
-                                <li>stripe: test</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/prototype.plist">Download</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- IOS-PROD -->
-            <div class="row mt-3">
-                <div class="col-sm-12"><h3 style="border-bottom: 1px solid">IOS - PROD</h3></div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">POC-RBI-PROD</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: https://sonect.r-itservices.at/</li>
-                                <li>stripe: live</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/rbiprod.plist">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">3.0.2</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: https://api.sonect.ch</li>
-                                <li>stripe: live</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/3.0.2.plist">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">4.0</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: http://207.154.210.145:8080</li>
-                                <li>stripe: live</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/4.0.plist">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- ANDROID-DEV -->
-            <div class="row mt-3">
-                <div class="col-sm-12"><h3 style="border-bottom: 1px solid">Android - DEV</h3></div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">Development</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: http://207.154.210.145:8080</li>
-                                <li>stripe: test</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="https://github.com/sonect/app-dist/releases/download/dev/app-debug.apk">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RBI -->
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">POC - RBI</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: http://138.68.73.155:8080</li>
-                                <li>stripe: test</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="https://github.com/sonect/app-dist/releases/download/rbi/app-release.apk">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">prototype</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: http://207.154.210.145:8080</li>
-                                <li>stripe: test</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="https://github.com/sonect/app-dist/releases/download/prototype/app-debug.apk">Download</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ANDROID-PROD -->
-            <div class="row mt-3">
-                <div class="col-sm-12"><h3 style="border-bottom: 1px solid">Android - PROD</h3></div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">POC-RBI-PROD</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: https://sonect.r-itservices.at</li>
-                                <li>stripe: live</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="https://github.com/sonect/app-dist/releases/download/POC-RBI-PROD/app-release.apk">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">3.0</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: https://api.sonect.ch</li>
-                                <li>stripe: live</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="https://github.com/sonect/app-dist/releases/download/3.0/app-sonect-release.apk">Download</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">4.0</h4>
-                            <p class="card-text">
-                            <ul>
-                                <li>server: http://207.154.210.145:8080</li>
-                                <li>stripe: live</li>
-                            </ul>
-                            </p>
-                            <a class="btn btn-primary download-link" href="https://github.com/sonect/app-dist/releases/download/4.0/app-release.apk">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- KEYS -->
-            <div class="row mt-3">
-                <div class="col-sm-12"><h3 style="border-bottom: 1px solid">KEYS</h3></div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card sonect-blue-bg">
-                        <div class="card-body">
-                            <h4 class="card-title">STRIPE</h4>
-                            <p class="card-text">
-                                <ul>
-                                    <li>test: pk_test_ScqBFohav9JJiAmrHtoEbjy1</li>
-                                    <li>live: pk_live_5n8lPD1uoqn3xPWoqr4tu9cl</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                    <div class="card sonect-orange-bg">
-                        <div class="card-body">
-                            <h4 class="card-title">STRIPE - RBI</h4>
-                            <p class="card-text">
-                                <ul>
-                                    <li>test: pk_test_ScqBFohav9JJiAmrHtoEbjy1</li>
-                                    <li>live: pk_live_8z0wXkcPG69YBPCNt7x0qrsY</li>
-                                </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
+    <div class="row mb-3">
+        <div class="col">
+            <img src="assets/img/Sonect_Wordmark_Black_RGB_TRANSP.png" alt="SONECT AG" style="height: 70px; width: auto;"/>
         </div>
-    </body>
+    </div>
+
+    <!-- IOS-DEV -->
+    <div class="row mt-3">
+        <div class="col-sm-12"><h3 style="border-bottom: 1px solid">IOS - DEV</h3></div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Development</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: http://207.154.210.145:8080</li>
+                        <li>stripe: test</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link"
+                       href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/dev.plist">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RBI -->
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">POC - RBI</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: http://138.68.73.155:8080</li>
+                        <li>stripe: test</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link"
+                       href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/rbi.plist">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">prototype</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: http://207.154.210.145:8080</li>
+                        <li>stripe: test</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link"
+                       href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/prototype.plist">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- IOS-PROD -->
+    <div class="row mt-3">
+        <div class="col-sm-12"><h3 style="border-bottom: 1px solid">IOS - PROD</h3></div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">POC-RBI-PROD</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: https://sonect.r-itservices.at/</li>
+                        <li>stripe: live</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link"
+                       href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/rbiprod.plist">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">3.0.2</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: https://api.sonect.ch</li>
+                        <li>stripe: live</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link"
+                       href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/3.0.2.plist">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">4.0</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: http://207.154.210.145:8080</li>
+                        <li>stripe: live</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link"
+                       href="itms-services://?action=download-manifest&url=https://sonect.github.io/app-dist/manifests/4.0.plist">Download</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ANDROID-DEV -->
+    <div class="row mt-3">
+        <div class="col-sm-12"><h3 style="border-bottom: 1px solid">Android - DEV</h3></div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Development</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: http://207.154.210.145:8080</li>
+                        <li>stripe: test</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link"
+                       href="https://github.com/sonect/app-dist/releases/download/dev/app-debug.apk">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- RBI -->
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">POC - RBI</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: http://138.68.73.155:8080</li>
+                        <li>stripe: test</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link"
+                       href="https://github.com/sonect/app-dist/releases/download/rbi/app-release.apk">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">prototype</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: http://207.154.210.145:8080</li>
+                        <li>stripe: test</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link" href="https://github.com/sonect/app-dist/releases/download/prototype/app-debug.apk">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ANDROID-PROD -->
+    <div class="row mt-3">
+        <div class="col-sm-12"><h3 style="border-bottom: 1px solid">Android - PROD</h3></div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">POC-RBI-PROD</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: https://sonect.r-itservices.at</li>
+                        <li>stripe: live</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link" href="https://github.com/sonect/app-dist/releases/download/POC-RBI-PROD/app-release.apk">Download</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">3.0</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: https://api.sonect.ch</li>
+                        <li>stripe: live</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link" href="https://github.com/sonect/app-dist/releases/download/3.0/app-sonect-release.apk">Download</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">4.0</h4>
+                    <p class="card-text">
+                    <ul>
+                        <li>server: http://207.154.210.145:8080</li>
+                        <li>stripe: live</li>
+                    </ul>
+                    </p>
+                    <a class="btn btn-primary download-link"
+                       href="https://github.com/sonect/app-dist/releases/download/4.0/app-release.apk">Download</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- KEYS -->
+    <div class="row mt-3">
+        <div class="col-sm-12"><h3 style="border-bottom: 1px solid">KEYS</h3></div>
+
+        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="card sonect-blue-bg">
+                < class="card-body">
+                <h4 class="card-title">STRIPE</h4>
+                <p class="card-text">
+                    <table>
+                        <colgroup>
+                            <col style="width: 20%">
+                            <col style="">
+                        </colgroup>
+                        <tr>
+                            <td>test:</td>
+                            <td>pk_test_ScqBFohav9JJiAmrHtoEbjy1</td>
+                        </tr>
+                        <tr>
+                            <td>live:</td>
+                            <td>pk_live_5n8lPD1uoqn3xPWoqr4tu9cl</td>
+                        </tr>
+                    </table>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+        <div class="card sonect-orange-bg">
+            <div class="card-body">
+                <h4 class="card-title">STRIPE - RBI</h4>
+                <p class="card-text">
+                    <table>
+                        <colgroup>
+                            <col style="width: 20%">
+                            <col style="">
+                        </colgroup>
+                        <tr>
+                            <td>test:</td>
+                            <td>pk_test_ScqBFohav9JJiAmrHtoEbjy1</td>
+                        </tr>
+                        <tr>
+                            <td>live:</td>
+                            <td>pk_live_8z0wXkcPG69YBPCNt7x0qrsY</td>
+                        </tr>
+                    </table>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+</body>
 </html>
