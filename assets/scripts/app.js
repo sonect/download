@@ -47,16 +47,19 @@ app.controller('appDistController', function ($scope, $http, $filter) {
                         if (angular.isDefined(releaseLink)) {
                             releaseLink.classList.remove("disabled");
                             var cardNode = releaseLink.parentNode;
-                            var cardTitleNode = cardNode.getElementsByClassName('card-title')[0];
-                            var cardSubTitleNode, date;
+                            var cardTitleNode = cardNode.getElementsByClassName('card-title')[ 0 ],
+                                cardSubTitleNode = cardNode.getElementsByClassName('card-subtitle mb-2 text-muted')[ 0 ],
+                                date = $filter('date')(new Date(asset.updated_at), 'dd.MM.yyyy (HH:mm:ss)'),
+                                textNode = document.createTextNode(date + " - " + asset.uploader[ "login" ]);
 
                             if (angular.isDefined(cardTitleNode)) {
+                                if (angular.isDefined(cardSubTitleNode)) {
+                                    cardSubTitleNode.remove();
+                                }
+
                                 cardSubTitleNode = document.createElement('h6');
                                 cardSubTitleNode.className = 'card-subtitle mb-2 text-muted';
-
-                                date = $filter('date')(new Date(asset.updated_at), 'dd.MM.yyyy (HH:mm:ss)');
-                                cardSubTitleNode.appendChild(document.createTextNode(date + " - " + asset.uploader[ "login" ]));
-
+                                cardSubTitleNode.appendChild(textNode);
                                 cardNode.insertBefore(cardSubTitleNode, cardTitleNode.nextSibling);
                             }
                         }
