@@ -1,1 +1,1 @@
-# sonect_app_distribution
+# SONECT app (test) download
