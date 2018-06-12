@@ -1,7 +1,7 @@
 var app = angular.module('appDist', []);
 
 app.controller('appDistController', function ($scope, $http, $filter) {
-    var releasesURL = "https://api.github.com/repos/sonect/app-dist/releases";
+    var releasesURL = "https://api.github.com/repos/sonect/download/releases";
 
     var links = document.getElementsByTagName('a');
     var releases = [];
