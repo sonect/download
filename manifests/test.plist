@@ -29,13 +29,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>ch.sonect.app.dev</string>
+				<string>ch.sonect.app.test</string>
 				<key>bundle-version</key>
 				<string>1.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>SONECT-DEV</string>
+				<string>SONECT-TET</string>
 			</dict>
 		</dict>
 	</array>
